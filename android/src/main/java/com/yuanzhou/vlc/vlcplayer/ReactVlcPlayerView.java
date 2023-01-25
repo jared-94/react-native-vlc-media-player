@@ -209,11 +209,13 @@ class ReactVlcPlayerView extends TextureView implements
             currentTime = mMediaPlayer.getTime();
             float position = mMediaPlayer.getPosition();
             totalLength = mMediaPlayer.getLength();
+            String aspectRatio = mMediaPlayer.getAspectRatio();
             WritableMap map = Arguments.createMap();
             map.putBoolean("isPlaying", isPlaying);
             map.putDouble("position", position);
             map.putDouble("currentTime", currentTime);
             map.putDouble("duration", totalLength);
+            map.putString("aspectRatio", aspectRatio);
 
             switch (event.type) {
                 case MediaPlayer.Event.EndReached:
