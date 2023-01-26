@@ -36,8 +36,8 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "com.facebook.react:react-native:+"
-    implementation 'org.videolan.android:libvlc-all:3.6.0-eap4'
+    implementation("com.facebook.react:react-android")
+    implementation 'org.videolan.android:libvlc-all:3.2.6'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.annotation:annotation:1.2.0'

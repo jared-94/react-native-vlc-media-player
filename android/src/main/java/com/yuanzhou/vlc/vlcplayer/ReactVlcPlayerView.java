@@ -18,6 +18,7 @@ import com.facebook.react.bridge.ReadableMap;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.uimanager.ThemedReactContext;
 
+//import org.videolan.libvlc.IVLCVout;
 import org.videolan.libvlc.interfaces.IVLCVout;
 import org.videolan.libvlc.LibVLC;
 import org.videolan.libvlc.Media;
@@ -71,6 +72,8 @@ class ReactVlcPlayerView extends TextureView implements
 
     public ReactVlcPlayerView(ThemedReactContext context) {
         super(context);
+        //System.loadLibrary("c++_shared");
+        System.loadLibrary("vlcjni");
         this.eventEmitter = new VideoEventEmitter(context);
         this.themedReactContext = context;
         audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
